@@ -19,10 +19,10 @@
                     <template slot="title">
                         <i class="el-icon-message"></i>数据概况
                     </template>
-                    <router-link to="/report" tag="div">
+                    <router-link to="/report/index" tag="div">
                         <el-menu-item index="1-1">投放数据</el-menu-item>
                     </router-link>
-                    <router-link to="/report1" tag="div">
+                    <router-link to="/report/chart" tag="div">
                         <el-menu-item index="1-2">数据明细</el-menu-item>
                     </router-link>
                 </el-submenu>

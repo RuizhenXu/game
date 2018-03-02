@@ -12,13 +12,13 @@ export default new VueRouter({
         },
         {
             name: "report",
-            path: '/report',
+            path: '/report/index',
             component: resolve =>void(require(['../components/report/index.vue'], resolve))
         },
         {
-            name: "report1",
-            path: '/report1',
-            component: resolve =>void(require(['../components/ExampleComponent.vue'], resolve))
+            name: "chart",
+            path: '/report/chart',
+            component: resolve =>void(require(['../components/report/chart.vue'], resolve))
         },
         {
             name: "example",

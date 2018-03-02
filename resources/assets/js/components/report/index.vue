@@ -1,5 +1,9 @@
 <template>
     <div>
+        <el-breadcrumb separator="/">
+            <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+            <el-breadcrumb-item>报表数据</el-breadcrumb-item>
+        </el-breadcrumb>
         <h1>报表数据</h1>
         <el-button @click="visible = true">报表</el-button>
 

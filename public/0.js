@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 207:
+/***/ 690:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(78)
+var normalizeComponent = __webpack_require__(263)
 /* script */
-var __vue_script__ = __webpack_require__(212)
+var __vue_script__ = __webpack_require__(695)
 /* template */
-var __vue_template__ = __webpack_require__(213)
+var __vue_template__ = __webpack_require__(696)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -48,11 +48,15 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 212:
+/***/ 695:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
 //
 //
 //
@@ -111,7 +115,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 213:
+/***/ 696:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -121,6 +125,19 @@ var render = function() {
   return _c(
     "div",
     [
+      _c(
+        "el-breadcrumb",
+        { attrs: { separator: "/" } },
+        [
+          _c("el-breadcrumb-item", { attrs: { to: { path: "/" } } }, [
+            _vm._v("首页")
+          ]),
+          _vm._v(" "),
+          _c("el-breadcrumb-item", [_vm._v("报表数据")])
+        ],
+        1
+      ),
+      _vm._v(" "),
       _c("h1", [_vm._v("报表数据")]),
       _vm._v(" "),
       _c(
