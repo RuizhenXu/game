@@ -28,8 +28,12 @@
                 </el-submenu>
 
                 <el-submenu index="2">
-                    <template slot="title"><i class="el-icon-menu"></i>推广</template>
-                    <el-menu-item index="2-1">推广计划</el-menu-item>
+                    <template slot="title">
+                        <i class="el-icon-menu"></i>推广
+                    </template>
+                    <router-link to="/spread/spreadPlan" tag="div">
+                        <el-menu-item index="2-1">推广计划</el-menu-item>
+                    </router-link>
                     <el-menu-item index="2-2">广告管理</el-menu-item>
                     <el-menu-item index="2-3">新建广告</el-menu-item>
                 </el-submenu>
@@ -52,8 +56,6 @@
         <el-container>
             <el-header style="text-align: right; font-size: 12px">
                 <el-dropdown>
-                    <!--<i class="el-icon-setting" style="margin-right: 15px"></i>-->
-                    <!--<span>王小虎</span>-->
                     <span class="el-dropdown-link" style="color: #ffffff;">
                         admin
                         <i class="el-icon-arrow-down el-icon--right"></i>

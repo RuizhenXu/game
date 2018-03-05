@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 692:
+/***/ 383:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(263)
+var normalizeComponent = __webpack_require__(162)
 /* script */
-var __vue_script__ = __webpack_require__(699)
+var __vue_script__ = __webpack_require__(389)
 /* template */
-var __vue_template__ = __webpack_require__(700)
+var __vue_template__ = __webpack_require__(390)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\hello\\test2.vue"
+Component.options.__file = "resources\\assets\\js\\components\\index.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-bd8c7462", Component.options)
+    hotAPI.createRecord("data-v-7e6399ea", Component.options)
   } else {
-    hotAPI.reload("data-v-bd8c7462", Component.options)
+    hotAPI.reload("data-v-7e6399ea", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,7 +48,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 699:
+/***/ 389:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59,17 +59,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {},
     data: function data() {
-        return {
-            visible: false
-        };
+        return {};
     },
 
     methods: {},
@@ -78,53 +72,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 700:
+/***/ 390:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("h1", [_vm._v("test222")]),
-      _vm._v(" "),
-      _c(
-        "el-button",
-        {
-          on: {
-            click: function($event) {
-              _vm.visible = true
-            }
-          }
-        },
-        [_vm._v("按钮222")]
-      ),
-      _vm._v(" "),
-      _c(
-        "el-dialog",
-        {
-          attrs: { visible: _vm.visible, title: "Hello world" },
-          on: {
-            "update:visible": function($event) {
-              _vm.visible = $event
-            }
-          }
-        },
-        [_c("p", [_vm._v("欢迎使用 Element")])]
-      )
-    ],
-    1
-  )
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h1", [_vm._v("index")])])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-bd8c7462", module.exports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-7e6399ea", module.exports)
   }
 }
 

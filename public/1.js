@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 691:
+/***/ 384:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(263)
+var normalizeComponent = __webpack_require__(162)
 /* script */
-var __vue_script__ = __webpack_require__(697)
+var __vue_script__ = __webpack_require__(391)
 /* template */
-var __vue_template__ = __webpack_require__(698)
+var __vue_template__ = __webpack_require__(392)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\report\\chart.vue"
+Component.options.__file = "resources\\assets\\js\\components\\report\\index.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-9a0ec1e6", Component.options)
+    hotAPI.createRecord("data-v-24965601", Component.options)
   } else {
-    hotAPI.reload("data-v-9a0ec1e6", Component.options)
+    hotAPI.reload("data-v-24965601", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,11 +48,20 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 697:
+/***/ 391:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -74,31 +83,39 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
 
     methods: {
-        initData: function initData() {
-            var myChart = this.$echarts.init(document.getElementById('chart'));
-            myChart.setOption({
-                title: { text: 'Echarts Demo' },
-                tooltip: {},
-                xAxis: {
-                    data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-                },
-                yAxis: {},
-                series: [{
-                    name: '销量',
-                    type: 'bar',
-                    data: [5, 20, 36, 10, 10, 20]
-                }]
+        tests: function tests(event) {
+            this.$notify({
+                title: 'a message',
+                message: 'test message',
+                type: 'success'
+            });
+        },
+
+        api: function api(event) {
+            this.$http.get('/api').then(function (response) {
+                console.log(response.data);
+            });
+        },
+
+        index: function index(event) {
+            var _this = this;
+
+            this.$http.get('/index').then(function (response) {
+                _this.$notify({
+                    title: response.data.title,
+                    message: response.data.msg,
+                    type: 'success'
+                });
             });
         }
+
     },
-    mounted: function mounted() {
-        this.initData();
-    }
+    mounted: function mounted() {}
 });
 
 /***/ }),
 
-/***/ 698:
+/***/ 392:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -116,17 +133,43 @@ var render = function() {
             _vm._v("首页")
           ]),
           _vm._v(" "),
-          _c("el-breadcrumb-item", [_vm._v("数据明细")])
+          _c("el-breadcrumb-item", [_vm._v("报表数据")])
         ],
         1
       ),
       _vm._v(" "),
-      _c("h2", [_vm._v("Chart")]),
+      _c("h1", [_vm._v("报表数据")]),
       _vm._v(" "),
-      _c("div", {
-        staticStyle: { width: "500px", height: "300px" },
-        attrs: { id: "chart" }
-      })
+      _c(
+        "el-button",
+        {
+          on: {
+            click: function($event) {
+              _vm.visible = true
+            }
+          }
+        },
+        [_vm._v("报表")]
+      ),
+      _vm._v(" "),
+      _c("el-button", { on: { click: _vm.tests } }, [_vm._v("Test")]),
+      _vm._v(" "),
+      _c("el-button", { on: { click: _vm.api } }, [_vm._v("api")]),
+      _vm._v(" "),
+      _c("el-button", { on: { click: _vm.index } }, [_vm._v("index")]),
+      _vm._v(" "),
+      _c(
+        "el-dialog",
+        {
+          attrs: { visible: _vm.visible, title: "Title" },
+          on: {
+            "update:visible": function($event) {
+              _vm.visible = $event
+            }
+          }
+        },
+        [_c("p", [_vm._v("This a Dialog")])]
+      )
     ],
     1
   )
@@ -137,7 +180,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-9a0ec1e6", module.exports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-24965601", module.exports)
   }
 }
 

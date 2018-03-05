@@ -6,20 +6,26 @@ export default new VueRouter({
     saveScrollPosition: true,
     routes: [
         {
-            name : "home",
+            name : "Home",
             path : "/",
             component : resolve =>void(require(['../components/index.vue'], resolve))
         },
         {
-            name: "report",
+            name: "Report",
             path: '/report/index',
             component: resolve =>void(require(['../components/report/index.vue'], resolve))
         },
         {
-            name: "chart",
+            name: "Chart",
             path: '/report/chart',
             component: resolve =>void(require(['../components/report/chart.vue'], resolve))
         },
+        {
+            name: "SpreadPlan",
+            path: '/spread/spreadPlan',
+            component: resolve =>void(require(['../components/spread/spreadPlan.vue'], resolve))
+        },
+
         {
             name: "example",
             path: '/example',

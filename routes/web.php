@@ -23,3 +23,5 @@ Route::get('/api', function () {
 });
 
 Route::get('/index', 'IndexController@index');
+
+Route::get('Spread/getPlanList','SpreadController@getPlanList');
